@@ -1,0 +1,59 @@
+{
+  "name": "payground-client",
+  "description": "Web app for your assessment",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "sb:start:frontend": "start-storybook -p 6007 -c .storybook/frontend",
+    "sb:build:frontend": "build-storybook -o ../storybook -c .storybook/frontend",
+    "sb:start:fullstack": "start-storybook -p 6008 -c .storybook/fullstack",
+    "sb:build:fullstack": "build-storybook -o ../storybook -c .storybook/fullstack",
+    "sb:start:backend": "start-storybook -p 6008 -c .storybook/backend",
+    "sb:build:backend": "build-storybook -o ../storybook -c .storybook/backend"
+  },
+  "prettier": {},
+  "dependencies": {
+    "@fontsource/rubik": "^4.5.11",
+    "axios": "^1.3.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icomoon": "^2.5.4",
+    "react-router-dom": "^6.6.0",
+    "reset-css": "^5.0.1",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@mdx-js/react": "1",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-vite": "^0.2.6",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "^2.2.0",
+    "babel-loader": "^8.3.0",
+    "prettier": "^2.8.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3",
+    "vite-plugin-checker": "^0.5.1",
+    "vitest": "^0.25.3"
+  },
+  "overrides": {
+    "@mdx-js/react": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    }
+  }
+}

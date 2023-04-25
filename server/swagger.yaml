@@ -1,0 +1,52 @@
+openapi: '3.0.3'
+info:
+  version: 1.0.0
+  title: Backend Payment Cards Service
+  description: Provides REST services to manage the payment cards
+servers:
+  - url: http://localhost:3000
+tags:
+  - name: Cards
+    description: API for payment cards in the system
+paths:
+  /cards:
+    get:
+      tags:
+        - cards
+      summary: List cards
+      operationId: listCardsController
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Card'
+components:
+  schemas:
+    Card:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 7577f5d2-3b3e-11ed-a261-0242ac120002
+        name:
+          type: string
+          example: Business
+        pan:
+          type: string
+          example: xxxx 5555
+        expiresAt:
+          type: string
+          format: date-time
+          example: 07/2022
+        expired:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
